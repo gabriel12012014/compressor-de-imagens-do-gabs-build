@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+  <meta charset="UTF-8" />
+  <link rel="icon" type="image/svg+xml" href="/vite.svg" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Compressor de imagens muito foda do Gabs</title>
+  <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;600;800&display=swap" rel="stylesheet">
+  <script type="module" crossorigin src="/assets/index-TyptXTcT.js"></script>
+  <link rel="stylesheet" crossorigin href="/assets/index-Dw88BY9y.css">
+</head>
+
+<body>
+  <div id="app">
+    <header class="hero">
+      <h1 class="gradient-text">Compressor de imagens muito foda do Gabs</h1>
+      <p class="subtitle">Personalize, converta e comprima suas imagens com qualidade máxima.</p>
+    </header>
+
+    <main>
+      <!-- View 1: Upload & Settings -->
+      <div id="upload-view">
+        <div class="settings-bar">
+          <p>Escolha o formato de saída:</p>
+          <div class="format-options">
+            <label class="radio-label">
+              <input type="radio" name="format" value="image/webp" checked>
+              <span>
+                WebP
+              </span>
+            </label>
+            <label class="radio-label">
+              <input type="radio" name="format" value="image/jpeg">
+              <span>JPG</span>
+            </label>
+
+          </div>
+
+          <div class="resize-options">
+            <p>Redimensionar (Largura Máx.):</p>
+            <div class="resize-input-group">
+              <input type="number" id="resize-input" placeholder="Ex: 1920" min="1">
+              <span>px</span>
+            </div>
+            <p class="small-hint">(Deixe vazio para manter original)</p>
+          </div>
+        </div>
+
+        <div class="drop-zone" id="drop-zone">
+          <div class="drop-content">
+            <svg class="upload-icon" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                d="M7 16a4 4 0 01-.88-7.903A5 5 0 1115.9 6L16 6a5 5 0 011 9.9M15 13l-3-3m0 0l-3 3m3-3v12" />
+            </svg>
+            <p>Arraste e solte suas imagens aqui</p>
+            <p class="small">ou clique para selecionar</p>
+            <input type="file" id="file-input" multiple accept="image/*" hidden />
+          </div>
+        </div>
+      </div>
+
+      <!-- View 2: Results -->
+      <div id="results-view" class="hidden">
+        <div class="controls" id="controls">
+          <div id="summary-stats" class="summary-stats">
+            <!-- JS will inject stats here -->
+          </div>
+          <div class="actions">
+            <button id="download-all-btn" class="btn btn-primary">Baixar Todas (ZIP)</button>
+            <button id="reset-btn" class="btn btn-secondary">Comprimir Novamente</button>
+          </div>
+        </div>
+
+        <div class="file-list" id="file-list">
+          <!-- File Items will appear here -->
+        </div>
+      </div>
+    </main>
+
+    <footer>
+      <p>
+        <a href="https://linktr.ee/luckygabz" target="_blank" rel="noopener noreferrer">feito por gabs</a>
+      </p>
+    </footer>
+  </div>
+</body>
+
+</html>
